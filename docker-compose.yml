@@ -1,0 +1,20 @@
+version: '3.8'
+
+
+
+services:
+  postgres:
+    image: postgres:16-alpine          # Koristim Alpine varijantu radi manje veličine
+    container_name: medical_postgres    # Ime kontejnera
+    environment:
+      POSTGRES_USER: meduser           # Korisničko ime za bazu
+      POSTGRES_PASSWORD: medpass123    # Lozinka
+      POSTGRES_DB: medical_db          # Naziv baze podataka
+    ports:
+      - "5432:5432"                    # Mapiranje porta: host:container
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Trajno čuvanje podataka
+    restart: unless-stopped            # Restart politika
+
+volumes:
+  postgres_data:                       # Named volume za trajnost podataka

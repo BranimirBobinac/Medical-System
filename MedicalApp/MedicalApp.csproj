@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!-- Referenciram vlastiti ORM projekt -->
+  <ItemGroup>
+    <ProjectReference Include="..\MedicalOrm\MedicalOrm.csproj" />
+  </ItemGroup>
+
+  <!-- Npgsql za direktne konekcije ako je potrebno -->
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.3" />
+  </ItemGroup>
+
+</Project>
