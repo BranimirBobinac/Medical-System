@@ -146,3 +146,6 @@ If you change the credentials or port in `docker-compose.yml`, update this strin
 docker compose down        # stop the container, keep data
 docker compose down -v     # stop the container and delete all data
 ```
+
+## Author
+* Branimir Bobinac
